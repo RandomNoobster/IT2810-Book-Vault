@@ -52,8 +52,6 @@ This is the backend of the project. It is a GraphQL server built with [Apollo Se
 
 ## How to run on the VM 🖥️
 
-> 💡 **Note** <br> Remember to be connected to an NTNU network to access the VM.
-
 To run the backend on the VM, you can simply run the [`vmSetup.sh`](../vmSetup.sh) script on the VM. This will install the necessary dependencies and start the server. You run the script by running the following commands in the terminal (assuming you have already used ssh to establish a connection to the VM):
 
 ```bash
@@ -73,12 +71,12 @@ sh vmSetup.sh
 If you simply want to connect to the backend running on the VM, you can use the following URL:
 
 ```url
-http://it2810-05.idi.ntnu.no/graphql/
+http://140.238.102.215/graphql/
 ```
 
 ## API Reference 📚
 
-The API is a GraphQL API. You can find the schema in [`/backend/schema.graphql`](/backend/schema.graphql). Instead of including an API Reference here, you can use the reference generated in the VM-hosted [sandbox](http://it2810-05.idi.ntnu.no/graphql/) to explore the API.
+The API is a GraphQL API. You can find the schema in [`/backend/schema.graphql`](/backend/schema.graphql). Instead of including an API Reference here, you can use the reference generated in the VM-hosted [sandbox](http://140.238.102.215/graphql/) to explore the API.
 
 ### Example query and response
 

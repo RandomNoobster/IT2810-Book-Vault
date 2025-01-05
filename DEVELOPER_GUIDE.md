@@ -12,7 +12,7 @@ This document is intended to provide information about the project structure, be
 Clone the repository to your local machine by running the following command in your terminal:
 
 ```
-git clone https://git.ntnu.no/IT2810-H24/T05-Project-2.git
+git clone https://github.com/RandomNoobster/IT2810-Book-Vault.git
 ```
 
 Navigate to the project directory:

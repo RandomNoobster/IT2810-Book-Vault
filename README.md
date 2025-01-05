@@ -78,7 +78,7 @@ Book Vault is a comprehensive web-based book catalogue, with close to 40 thousan
 Before doing anything else, you have to clone the repository:
 
 ```
-git clone https://git.ntnu.no/IT2810-H24/T05-Project-2.git
+git clone https://github.com/RandomNoobster/IT2810-Book-Vault.git
 ```
 
 ### Frontend
@@ -97,7 +97,7 @@ npm run dev
 
 ### Virtual Machine
 
-The application is running on a VM at [http://it2810-05.idi.ntnu.no/project2](http://it2810-05.idi.ntnu.no/project2)
+The application is running on a VM at [http://140.238.102.215/project2](http://140.238.102.215/project2)
 
 ## Pages 📃
 
@@ -145,8 +145,8 @@ You can also sort the results in either ascending or descending order by either 
 We have also implemented a list view of the books to display more information about each book.
 
 | ![List view of book page](/media/Listview.png) |
-| :------------------------------------------------: |
-|               List view of book page               |
+| :--------------------------------------------: |
+|             List view of book page             |
 
 ### Book-info page
 
@@ -215,7 +215,7 @@ On the "have read"-list page you can view all the books you have marked as "have
 
 ### Testing page
 
-This page is only available through [adding /testing to the url when you are on the homepage or by clicking this link](http://it2810-05.idi.ntnu.no/project2/testing). This page is meant for our testers.
+This page is only available through [adding /testing to the url when you are on the homepage or by clicking this link](http://140.238.102.215/project2/testing). This page is meant for our testers.
 
 **Example test made easier by this page:**
 
@@ -404,7 +404,7 @@ Read about how we got the dataset [here](./preprocessing/README.md).
 
 ## Test coverage 🧪
 
-[_This part is partially copied from the first project_](https://git.ntnu.no/IT2810-H24/T05-Project-1/blob/main/README.md)
+[_This part is partially copied from the first project_](https://github.com/RandomNoobster/IT2810-Whirlwind/blob/main/README.md)
 
 We use Vitest with Jest for testing.
 
@@ -445,7 +445,7 @@ We are using Cypress to do end-to-end tests. We have followed best practices and
 The end-to-end tests will test the application as a whole, with the frontend and backend connected. When running these tests you can either choose to run the backend locally or use the backend in the virtual machine. To change this you go to this [env-file](./frontend/.env) and change it to either
 
 - `VITE_GRAPHQL_ENDPOINT="http://localhost:3001/graphql"` for a local backend.
-- `VITE_GRAPHQL_ENDPOINT="http://it2810-05.idi.ntnu.no/graphql"` for the backend in the virtual machine.
+- `VITE_GRAPHQL_ENDPOINT="http://140.238.102.215/graphql"` for the backend in the virtual machine.
 
 It is best practice to run the E2E on a local test database (or in this course we could use a test database on the VM). However, we know it can take some time to setup a local database if you don't already have MongoDB installed. Therefore we have made it possible to run the tests on the backend in the virtual machine. We have created a predefined test user which you will take control of, when running the E2E tests if you use the virtual machine. In a real-world scenario, we would have not done this and instead used a local test database.
 
