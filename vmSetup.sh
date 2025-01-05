@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/krisose/T05-Project-2/
+cd /home/opc/T05-Project-2/
 git pull
 
 # preprocessing
@@ -7,13 +7,14 @@ python3 preprocessing/preprocessing.py
 python3 preprocessing/upload_json_to_mongo.py
 
 # backend
-cd /home/krisose/T05-Project-2/backend
+cd /home/opc/T05-Project-2/backend
 npm install
 pkill -f node
-nohup npm start &
+npm run compile
+nohup node dist/server.js &
 
 # frontend
-cd /home/krisose/T05-Project-2/frontend
+cd /home/opc/T05-Project-2/frontend
 npm install
 npm run build
 sudo rm -rf /var/www/html/project2/ 
