@@ -98,7 +98,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: '/project2',
+    basename: '/bookvault',
   }
 );
 

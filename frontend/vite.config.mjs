@@ -6,7 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), svgr()],
-  base: '/project2',
+  base: '/bookvault',
   server: {
     open: true,
   },
