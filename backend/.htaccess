@@ -7,4 +7,8 @@ RewriteRule ^(.*)$ http://localhost:3001/$1 [P,L]
 # Enable CORS headers for Apollo Server (if needed)
 Header always set Access-Control-Allow-Origin "*"
 Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
-Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Apollo-Operation-Name, Apollo-Require-Preflight"
+
+# Add necessary headers to bypass Apollo Server's CSRF prevention
+RequestHeader set Content-Type "application/json"
+RequestHeader set X-Apollo-Operation-Name "proxy-request"
