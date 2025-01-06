@@ -18,7 +18,7 @@ git clone https://github.com/RandomNoobster/IT2810-Book-Vault.git
 Navigate to the project directory:
 
 ```
-cd T05-Project-2
+cd IT2810-Book-Vault
 ```
 
 Be sure to be in the root repository when opening in VSCode, in order to get format on save with Prettier.

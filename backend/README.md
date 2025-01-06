@@ -55,14 +55,14 @@ This is the backend of the project. It is a GraphQL server built with [Apollo Se
 To run the backend on the VM, you can simply run the [`vmSetup.sh`](../vmSetup.sh) script on the VM. This will install the necessary dependencies and start the server. You run the script by running the following commands in the terminal (assuming you have already used ssh to establish a connection to the VM):
 
 ```bash
-cd /home/krisose/T05-Project-2
+cd /home/opc/IT2810-Book-Vault
 sh vmSetup.sh
 ```
 
 > 💡 **Note** <br> Running [`vmSetup.sh`](../vmSetup.sh) will also do other things such as pulling from `main` and building the app. If you are only interested in running the backend, the relevant commands would be:
 >
 > ```sh
-> cd /home/krisose/T05-Project-2/backend
+> cd /home/opc/IT2810-Book-Vault/backend
 > npm install
 > pkill -f node
 > nohup npm start &
