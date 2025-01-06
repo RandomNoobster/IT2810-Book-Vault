@@ -17,5 +17,5 @@ nohup node dist/server.js &
 cd /home/opc/IT2810-Book-Vault/frontend
 npm install
 npm run build
-sudo rm -rf /var/www/html/project2/ 
-sudo mv dist /var/www/html/project2/
+sudo rm -rf /var/www/html/bookvault/ 
+sudo mv dist /var/www/html/bookvault/

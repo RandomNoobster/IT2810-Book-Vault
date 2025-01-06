@@ -97,7 +97,7 @@ npm run dev
 
 ### Virtual Machine
 
-The application is running on a VM at [http://140.238.102.215/project2](http://140.238.102.215/project2)
+The application is running on a VM at [http://140.238.102.215/bookvault](http://140.238.102.215/bookvault)
 
 ## Pages 📃
 
@@ -215,7 +215,7 @@ On the "have read"-list page you can view all the books you have marked as "have
 
 ### Testing page
 
-This page is only available through [adding /testing to the url when you are on the homepage or by clicking this link](http://140.238.102.215/project2/testing). This page is meant for our testers.
+This page is only available through [adding /testing to the url when you are on the homepage or by clicking this link](http://140.238.102.215/bookvault/testing). This page is meant for our testers.
 
 **Example test made easier by this page:**
 

@@ -20,7 +20,7 @@ exports[`Logo > LogoFull matches snapshot 1`] = `
     <img
       alt="Book Logo Icon"
       class="m_9e117634 mantine-Image-root"
-      src="/project2/src/assets/BookVaultLogo.webp"
+      src="/bookvault/src/assets/BookVaultLogo.webp"
     />
     <svg
       height="0.326667in"
@@ -54,7 +54,7 @@ exports[`Logo > LogoIcon matches snapshot 1`] = `
   <img
     alt="Book Logo Icon"
     class="m_9e117634 mantine-Image-root"
-    src="/project2/src/assets/BookVaultLogo.webp"
+    src="/bookvault/src/assets/BookVaultLogo.webp"
   />
 </DocumentFragment>
 `;

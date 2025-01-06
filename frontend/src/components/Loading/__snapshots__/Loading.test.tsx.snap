@@ -20,7 +20,7 @@ exports[`Loading > matches snapshot 1`] = `
       alt="Loading"
       class="_icon_55dd7a m_5ae2e3c mantine-Loader-root m_9e117634 mantine-Image-root"
       data-size="xxl"
-      src="/project2/src/assets/BookLoader.gif"
+      src="/bookvault/src/assets/BookLoader.gif"
       style="stroke: var(--loader-color); --loader-size: calc(5.625rem * var(--mantine-scale));"
     />
     <p

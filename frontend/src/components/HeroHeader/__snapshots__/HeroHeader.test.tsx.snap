@@ -21,7 +21,7 @@ exports[`HeroHeader component > renders correctly 1`] = `
       <img
         alt="Person reading a book"
         class="_vectorImage_62bb53 m_9e117634 mantine-Image-root"
-        src="/project2/src/assets/ReadingBook.webp"
+        src="/bookvault/src/assets/ReadingBook.webp"
       />
       <div
         class="_textContainer_62bb53 m_6d731127 mantine-Stack-root"
@@ -40,7 +40,7 @@ exports[`HeroHeader component > renders correctly 1`] = `
           <img
             alt="The Book Vault"
             class="m_9e117634 mantine-Image-root"
-            src="/project2/src/assets/BookVaultText.svg"
+            src="/bookvault/src/assets/BookVaultText.svg"
           />
         </div>
         <p

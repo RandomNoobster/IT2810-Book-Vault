@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "http://localhost:5173/project2",
+    "baseUrl": "http://localhost:5173/bookvault",
     "target": "es5",
     "lib": ["es5", "dom"],
     "types": ["cypress", "node"]
