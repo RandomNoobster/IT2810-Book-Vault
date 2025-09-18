@@ -1,0 +1,108 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BookCategories component > renders correctly 1`] = `
+<DocumentFragment>
+  <style
+    data-mantine-styles="true"
+  >
+    :root{--mantine-font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;--mantine-font-family-headings: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;--mantine-breakpoint-xs: 30em;--mantine-breakpoint-md: 64em;--mantine-breakpoint-xl: 90em;--mantine-breakpoint-xxs: 24em;--mantine-color-dark-blue-0: #155896;--mantine-color-dark-blue-1: #124b81;--mantine-color-dark-blue-2: #0f3f6c;--mantine-color-dark-blue-3: #0c3256;--mantine-color-dark-blue-4: #092641;--mantine-color-dark-blue-5: #06192b;--mantine-color-dark-blue-6: #051321;--mantine-color-dark-blue-7: #030d16;--mantine-color-dark-blue-8: #030a11;--mantine-color-dark-blue-9: #02070b;--mantine-color-beige-0: #fcfaf7;--mantine-color-beige-1: #f9f5ef;--mantine-color-beige-2: #f6f0e7;--mantine-color-beige-3: #f2eade;--mantine-color-beige-4: #eee4d3;--mantine-color-beige-5: #e9ddc8;--mantine-color-beige-6: #e2d1b5;--mantine-color-beige-7: #dac5a1;--mantine-color-beige-8: #d4bd94;--mantine-color-beige-9: #6a5f4a;}:root[data-mantine-color-scheme="dark"]{--mantine-color-dark-blue-text: var(--mantine-color-dark-blue-4);--mantine-color-dark-blue-filled: var(--mantine-color-dark-blue-8);--mantine-color-dark-blue-filled-hover: var(--mantine-color-dark-blue-9);--mantine-color-dark-blue-light: rgba(5, 19, 33, 0.15);--mantine-color-dark-blue-light-hover: rgba(5, 19, 33, 0.2);--mantine-color-dark-blue-light-color: var(--mantine-color-dark-blue-3);--mantine-color-dark-blue-outline: var(--mantine-color-dark-blue-4);--mantine-color-dark-blue-outline-hover: rgba(9, 38, 65, 0.05);--mantine-color-beige-text: var(--mantine-color-beige-4);--mantine-color-beige-filled: var(--mantine-color-beige-8);--mantine-color-beige-filled-hover: var(--mantine-color-beige-9);--mantine-color-beige-light: rgba(226, 209, 181, 0.15);--mantine-color-beige-light-hover: rgba(226, 209, 181, 0.2);--mantine-color-beige-light-color: var(--mantine-color-beige-3);--mantine-color-beige-outline: var(--mantine-color-beige-4);--mantine-color-beige-outline-hover: rgba(238, 228, 211, 0.05);}:root[data-mantine-color-scheme="light"]{--mantine-color-dark-blue-text: var(--mantine-color-dark-blue-filled);--mantine-color-dark-blue-filled: var(--mantine-color-dark-blue-6);--mantine-color-dark-blue-filled-hover: var(--mantine-color-dark-blue-7);--mantine-color-dark-blue-light: rgba(5, 19, 33, 0.1);--mantine-color-dark-blue-light-hover: rgba(5, 19, 33, 0.12);--mantine-color-dark-blue-light-color: var(--mantine-color-dark-blue-6);--mantine-color-dark-blue-outline: var(--mantine-color-dark-blue-6);--mantine-color-dark-blue-outline-hover: rgba(5, 19, 33, 0.05);--mantine-color-beige-text: var(--mantine-color-beige-filled);--mantine-color-beige-filled: var(--mantine-color-beige-6);--mantine-color-beige-filled-hover: var(--mantine-color-beige-7);--mantine-color-beige-light: rgba(226, 209, 181, 0.1);--mantine-color-beige-light-hover: rgba(226, 209, 181, 0.12);--mantine-color-beige-light-color: var(--mantine-color-beige-6);--mantine-color-beige-outline: var(--mantine-color-beige-6);--mantine-color-beige-outline-hover: rgba(226, 209, 181, 0.05);}
+  </style>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 29.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 30em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 63.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 64em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 89.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 90em) {.mantine-hidden-from-xl {display: none !important;}}@media (max-width: 23.99375em) {.mantine-visible-from-xxs {display: none !important;}}@media (min-width: 24em) {.mantine-hidden-from-xxs {display: none !important;}}
+  </style>
+  <div
+    class=""
+    style="margin-block: var(--mantine-spacing-xl);"
+  >
+    <h3
+      class="m_8a5d1357 mantine-Title-root"
+      data-order="3"
+      style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size); font-weight: 600;"
+    >
+      Popular Genres
+    </h3>
+    <div
+      class="m_d57069b5 mantine-ScrollArea-root"
+      style="--scrollarea-scrollbar-size: calc(0.375rem * var(--mantine-scale)); --sa-corner-width: 0px; --sa-corner-height: 0px; width: 100%;"
+    >
+      <div
+        class="m_c0783ff9 mantine-ScrollArea-viewport"
+        data-offset-scrollbars="x"
+        data-scrollbars="xy"
+        style="overflow-x: scroll; overflow-y: scroll;"
+      >
+        <div
+          style="min-width: 100%; display: table;"
+        >
+          <div
+            class="m_8bffd616 mantine-Flex-root __m__-r4"
+            style="gap: var(--mantine-spacing-md); justify-content: space-between; padding-block: var(--mantine-spacing-xs);"
+          >
+            <a
+              class="_link_632e8c"
+              href="/books/drama"
+            >
+              <div
+                class="_categoryCard_632e8c m_1b7284a3 mantine-Paper-root"
+              >
+                <svg />
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                >
+                  Drama
+                </p>
+              </div>
+            </a>
+            <a
+              class="_link_632e8c"
+              href="/books/fantasy"
+            >
+              <div
+                class="_categoryCard_632e8c m_1b7284a3 mantine-Paper-root"
+              >
+                <svg />
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                >
+                  Fantasy
+                </p>
+              </div>
+            </a>
+            <a
+              class="_link_632e8c"
+              href="/books/scifi"
+            >
+              <div
+                class="_categoryCard_632e8c m_1b7284a3 mantine-Paper-root"
+              >
+                <svg />
+                <p
+                  class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+                >
+                  Science Fiction
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="m_c44ba933 mantine-ScrollArea-scrollbar"
+        data-mantine-scrollbar="true"
+        data-orientation="horizontal"
+        data-state="hidden"
+        style="position: absolute; --sa-thumb-width: 18px;"
+      />
+      <div
+        class="m_c44ba933 mantine-ScrollArea-scrollbar"
+        data-mantine-scrollbar="true"
+        data-orientation="vertical"
+        data-state="hidden"
+        style="position: absolute; --sa-thumb-height: 18px;"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

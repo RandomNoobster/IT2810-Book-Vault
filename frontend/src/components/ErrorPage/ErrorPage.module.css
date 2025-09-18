@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+  padding-top: rem(60px);
+  padding-bottom: rem(60px);
+}
+
+.image {
+  position: absolute;
+  opacity: 0.8;
+  color: light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
+  width: 80%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  padding-top: rem(120px);
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    padding-top: rem(220px);
+  }
+}
+
+.title {
+  text-align: center;
+  font-weight: 900;
+  font-size: rem(32px);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    font-size: rem(38px);
+  }
+}
+
+.description {
+  max-width: rem(540px);
+  margin: auto;
+  margin-top: var(--mantine-spacing-xl);
+  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+}

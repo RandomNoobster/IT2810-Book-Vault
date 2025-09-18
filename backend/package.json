@@ -1,0 +1,43 @@
+{
+  "name": "mern-server-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "postinstall": "npm run compile",
+    "compile": "tsc",
+    "start": "npm run compile && node dist/server.js",
+    "lint": "npx eslint .",
+    "test": "npm run lint && npm run compile && vitest run",
+    "prettier": "prettier --check \"**/*.{ts,tsx}\"",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "4.11.2",
+    "@apollo/subgraph": "2.9.3",
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "4.21.1",
+    "globals": "15.12.0",
+    "graphql": "16.9.0",
+    "graphql-tag": "2.12.6",
+    "mongodb": "5.9.2",
+    "uuid": "10.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.14.0",
+    "@types/cors": "2.8.17",
+    "@types/eslint__js": "8.42.3",
+    "@types/express": "5.0.0",
+    "@types/node": "20.17.6",
+    "eslint": "9.14.0",
+    "prettier": "3.3.3",
+    "typescript": "5.6.3",
+    "typescript-eslint": "8.14.0",
+    "vitest": "2.1.5"
+  }
+}

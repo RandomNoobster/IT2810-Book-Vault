@@ -1,0 +1,4 @@
+.filterContainer {
+  top: calc(var(--app-shell-header-height) + 2rem);
+  height: fit-content;
+}

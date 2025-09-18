@@ -1,0 +1,19 @@
+.wrapper {
+  height: 100%;
+  color: light-dark(black, white);
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  svg {
+    height: 70%;
+    width: auto;
+  }
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}

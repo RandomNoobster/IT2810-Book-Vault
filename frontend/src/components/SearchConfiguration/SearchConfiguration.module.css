@@ -1,0 +1,27 @@
+.multiSelect {
+  margin-top: 1rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.trackContainer {
+  padding: 0rem 0.75rem;
+}
+
+.description {
+  margin-top: rem(8px);
+  color: var(--mantine-color-dimmed);
+  font-size: var(--mantine-font-size-xs);
+  width: rem(30px);
+}
+
+.markLabel {
+  color: var(--mantine-color-dimmed);
+}
+
+.radioBody {
+  display: flex;
+  align-items: center;
+}

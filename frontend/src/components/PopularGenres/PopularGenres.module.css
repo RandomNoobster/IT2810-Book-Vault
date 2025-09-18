@@ -1,0 +1,48 @@
+.categoryCard {
+  width: rem(165px);
+  height: rem(180px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(25px);
+
+  border-radius: var(--mantine-radius-md);
+  box-sizing: content-box;
+  transition: background-color 0.15s ease-in-out;
+
+  background-color: var(--mantine-color-blue-light);
+  color: var(--mantine-color-blue-9);
+
+  &:hover {
+    background-color: var(--mantine-color-blue-1);
+  }
+
+  svg {
+    width: 40%;
+    height: auto;
+  }
+
+  p {
+    text-overflow: ellipsis;
+  }
+}
+
+[data-mantine-color-scheme='dark'] .categoryCard {
+  background-color: var(--mantine-color-blue-light);
+  color: var(--mantine-color-blue-1);
+
+  &:hover {
+    background-color: var(--mantine-color-blue-light-hover);
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: transform 0.15s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}

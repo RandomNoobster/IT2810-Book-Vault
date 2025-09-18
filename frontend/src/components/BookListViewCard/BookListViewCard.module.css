@@ -1,0 +1,19 @@
+.card {
+  height: min-content;
+}
+
+:where([data-mantine-color-scheme='light']) .card {
+  background-color: var(--mantine-color-gray-0);
+}
+
+.contentContainer {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: $mantine-breakpoint-xs) {
+  .contentContainer {
+    flex-wrap: nowrap;
+    justify-content: left;
+  }
+}

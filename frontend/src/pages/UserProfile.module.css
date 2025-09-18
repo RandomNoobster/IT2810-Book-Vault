@@ -1,0 +1,18 @@
+.link {
+  text-decoration: none;
+}
+
+.icon {
+  width: rem(32);
+  height: rem(32);
+}
+
+.desktopIcon {
+  display: none;
+}
+
+@media screen and (min-width: $mantine-breakpoint-sm) {
+  .desktopIcon {
+    display: initial;
+  }
+}

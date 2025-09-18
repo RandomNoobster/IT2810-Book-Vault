@@ -1,0 +1,293 @@
+scalar Date
+
+"General pagination information"
+type PaginationInfo {
+  totalPages: Int!
+  currentPage: Int!
+  isLastPage: Boolean!
+}
+
+type BookSummary {
+  totalBooks: Int!
+}
+
+type ReviewSummary {
+  total: Int!
+}
+
+"Result of counting items for each filter"
+type FilterCountResult {
+  authors: [FilterCount!]!
+  genres: [FilterCount!]!
+  publishers: [FilterCount!]!
+  ratings: [RatingCount!]!
+}
+
+type RatingCount {
+  rating: Int!
+  count: Int!
+}
+
+type FilterCount {
+  name: String!
+  count: Int!
+}
+
+"Paginated list of books"
+type BookPagination {
+  books: [Book!]!
+  pagination: PaginationInfo!
+  summary: BookSummary!
+  filterCounts: FilterCountResult!
+}
+
+type Book {
+  "Unique identifier for the book"
+  id: ID!
+  "Title of the book"
+  title: String!
+  "The series the book belongs to, if any"
+  series: String
+  "List of authors of the book"
+  authors: [Author!]!
+  "Description of the book"
+  description: String!
+  "Language of the book"
+  language: String!
+  "ISBN number of the book"
+  isbn: String!
+  "List of genres the book belongs to"
+  genres: [Genre!]!
+  "List of characters in the book"
+  characters: [String!]
+  "Format of the book (e.g., hardcover, paperback, ebook)"
+  bookFormat: String!
+  "Number of pages in the book"
+  pages: Int!
+  "Publisher of the book"
+  publisher: Publisher!
+  "Date the book was published"
+  publishDate: Date!
+  "List of awards the book has received"
+  awards: [String!]
+  "Weighted sum of the ratings."
+  rating: Float!
+  "Total number of ratings."
+  numRatings: Int!
+  "Number of ratings for each star level. The index corresponds to the number of stars. Index 0 is 1 star, index 1 is 2 stars, etc."
+  ratingsByStars: [Int!]!
+  "Setting of the book. A list of locations/periods where the book takes place"
+  setting: [String!]
+  "URL for the cover image of the book"
+  coverImg: String!
+  "Position of the book in the series"
+  numberInSeries: Int
+}
+
+type User {
+  UUID: ID!
+  name: String
+  at: Date
+  wantToRead: [Book!]
+  haveRead: [Book!]
+  secret: String
+}
+
+type Author {
+  "Name of the author"
+  name: ID!
+}
+
+type Genre {
+  "Name of the genre"
+  name: ID!
+}
+
+type Publisher {
+  "Name of the publisher"
+  name: ID!
+}
+
+type Stats {
+  "Total number of books"
+  totalBooks: Int!
+  "Total number of authors"
+  totalAuthors: Int!
+  "Total number of ratings"
+  totalRatings: Int!
+}
+
+type Review {
+  "id for review"
+  UUID: ID!
+  description: String!
+  rating: Float!
+  at: Date!
+  user: User
+  book: Book
+}
+
+type ReviewPagination {
+  reviews: [Review!]!
+  pagination: PaginationInfo!
+  summary: ReviewSummary!
+}
+
+type DateSpan {
+  "Earliest publish date"
+  earliest: Date!
+  "Latest publish date"
+  latest: Date!
+}
+
+type PageSpan {
+  "Minimum number of pages"
+  least: Int!
+  "Maximum number of pages"
+  most: Int!
+}
+
+input FilterInput {
+  search: String
+  sortInput: SortInput
+  beforeDate: Date
+  afterDate: Date
+  authors: [String!] # String instead of ID, because when storing the author string in the URL, we lose the object ID
+  genres: [String!]
+  publishers: [String!]
+  minPages: Int
+  maxPages: Int
+  minRating: Int
+  wantToReadListUserUUID: String
+  haveReadListUserUUID: String
+}
+
+type Query {
+  "Retrieve a list of books with optional filters"
+  books(input: FilterInput, offset: Int = 0, limit: Int = 10): BookPagination!
+
+  "Retrieve the amount of books meeting current filters and the new one"
+  filterCount(input: FilterInput): FilterCountResult!
+
+  "Retrieve a specific book based on id"
+  book(id: String!): Book!
+
+  user(UUID: String!, secret: String!): User
+
+  "Retrieve book reviews"
+  bookReviews(
+    bookID: String
+    limit: Int!
+    offset: Int!
+    avoidUserUUID: String
+    focusUserUUID: String
+  ): ReviewPagination!
+
+  bookReview(bookID: String!, userUUID: String!): Review
+
+  "Retrieve a list of authors"
+  authors: [Author!]!
+
+  "Retrieve a list of genres"
+  genres: [Genre!]!
+
+  "Retrieve a list of publishers"
+  publishers: [Publisher!]!
+
+  "Retrieve the span of publish dates"
+  dateSpan: DateSpan!
+
+  "Retrieve the span of number of pages"
+  pageSpan: PageSpan!
+
+  "Retrieve statistics about the website"
+  stats: Stats!
+
+  "Returns a random book"
+  randomBook: Book!
+}
+
+input CreateReviewInput {
+  userUUID: String!
+  bookID: String!
+  description: String!
+  rating: Float!
+  secret: String!
+}
+
+input UpdateReviewInput {
+  reviewUUID: String!
+  description: String!
+  rating: Float!
+  secret: String!
+}
+
+type reviewResponse {
+  book: Book
+  success: Boolean!
+  message: String!
+}
+
+type updateUserResponse {
+  user: User
+  success: Boolean!
+  message: String!
+}
+
+type updateUserlibraryResponse {
+  success: Boolean!
+  message: String!
+}
+
+input UpdateUsernameInput {
+  UUID: String!
+  name: String
+  secret: String!
+}
+
+input UpdateUserLibraryInput {
+  UUID: String!
+  wantToRead: String
+  haveRead: String
+  removeFromLibrary: String
+  secret: String!
+}
+
+type Mutation {
+  createUser: User!
+
+  updateUserLibrary(input: UpdateUserLibraryInput!): updateUserlibraryResponse!
+
+  updateUser(input: UpdateUsernameInput!): updateUserResponse!
+
+  createReview(input: CreateReviewInput!): reviewResponse!
+
+  updateReview(input: UpdateReviewInput!): reviewResponse!
+}
+
+enum SortOrder {
+  "Sort in ascending order"
+  asc
+  "Sort in descending order"
+  desc
+}
+
+enum SortBy {
+  "Sort by book name"
+  bookName
+  "Sort by author name"
+  authorName
+  "Sort by publisher name"
+  publisherName
+
+  "Sort by wantToRead"
+  wantToRead
+
+  "Sort by haveRead"
+  haveRead
+}
+
+input SortInput {
+  sortBy: SortBy!
+  sortOrder: SortOrder!
+}

@@ -1,0 +1,10 @@
+.select {
+  max-width: 5rem;
+  z-index: 90; /* 100 is the header */
+
+  label {
+    font-size: var(--mantine-font-size-xs);
+    font-weight: 400;
+    color: var(--mantine-color-dimmed);
+  }
+}

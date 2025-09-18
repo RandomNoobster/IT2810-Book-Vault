@@ -1,0 +1,7 @@
+:where([data-mantine-color-scheme='light']) .card {
+  background-color: var(--mantine-color-gray-0);
+}
+
+.testButton {
+  width: 100%;
+}

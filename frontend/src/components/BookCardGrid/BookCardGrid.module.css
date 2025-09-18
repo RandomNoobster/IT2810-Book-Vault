@@ -1,0 +1,23 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+
+  & > * {
+    transition: transform 0.15s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+      background-color: color-mix(in srgb, var(--mantine-color-dark-0) 25%, transparent);
+    }
+  }
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+}
+
+.noResultWrapper {
+  height: 100%;
+}

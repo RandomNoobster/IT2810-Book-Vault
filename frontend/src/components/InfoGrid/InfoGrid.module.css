@@ -1,0 +1,7 @@
+:where([data-mantine-color-scheme='light']) .paperBackground {
+  background-color: var(--mantine-color-gray-0);
+}
+
+:where([data-mantine-color-scheme='dark']) .paperBackground {
+  background-color: var(--mantine-color-dark-6);
+}

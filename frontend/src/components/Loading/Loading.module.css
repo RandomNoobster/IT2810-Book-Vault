@@ -1,0 +1,3 @@
+:where([data-mantine-color-scheme='light']) .icon {
+  filter: invert(1);
+}

@@ -1,0 +1,20 @@
+.card {
+  height: 100%;
+}
+
+.textSection {
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+}
+
+:where([data-mantine-color-scheme='light']) .card {
+  background-color: var(--mantine-color-gray-0);
+}
+
+:where([data-mantine-color-scheme='light']) .bookAuthor {
+  color: var(--mantine-color-gray-7);
+}
+
+:where([data-mantine-color-scheme='dark']) .bookAuthor {
+  color: var(--mantine-color-dark-1);
+}
